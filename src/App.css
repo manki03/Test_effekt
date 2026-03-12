@@ -66,13 +66,19 @@
   margin-top: 1rem;
   border: 2px solid #84cc16;
   border-radius: 999px;
-  padding: 0.65rem 1.35rem;
+  padding-top: 0.72rem;
+  padding-right: 1.32rem;
+  padding-bottom: 0.58rem;
+  padding-left: 1.48rem;
   background: rgba(3, 8, 0, 0.45);
   color: #d9f99d;
   font-size: 1.05rem;
   line-height: 1;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
 }
 
