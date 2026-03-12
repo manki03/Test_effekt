@@ -1,0 +1,169 @@
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.magnetic-button {
+  will-change: transform;
+  font-family: 'Tiny5', monospace;
+  transition: box-shadow 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.ascii-demo-root {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  background: #000;
+  color: #f6ffe2;
+}
+
+.ascii-demo-canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.ascii-demo-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  padding: 0 2.5rem;
+}
+
+.ascii-demo-text {
+  max-width: 34rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 24px;
+}
+
+.ascii-demo-title {
+  margin: 0 0 0.55rem;
+  font-size: clamp(2rem, 5vw, 3rem);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.ascii-demo-brand {
+  display: block;
+  margin: 0;
+  font-size: clamp(1.4rem, 3.8vw, 2.8rem);
+  text-decoration: none;
+  text-transform: none;
+  letter-spacing: 0.18em;
+  color: #bef264;
+  width: max-content;
+}
+
+.ascii-demo-brand:hover {
+  color: #d9f99d;
+}
+
+.ascii-demo-button {
+  margin-top: 1rem;
+  border: 2px solid #84cc16;
+  border-radius: 999px;
+  padding: 0.65rem 1.35rem;
+  background: rgba(3, 8, 0, 0.45);
+  color: #d9f99d;
+  font-size: 1.05rem;
+  line-height: 1;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.ascii-demo-button:hover {
+  background: rgba(132, 204, 22, 0.2);
+  box-shadow: 0 0 24px rgba(163, 230, 53, 0.28);
+}
+
+.portrait-page {
+  position: relative;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 16% 20%, rgba(153, 255, 64, 0.1), transparent 34%),
+    radial-gradient(circle at 84% 76%, rgba(190, 242, 100, 0.1), transparent 36%),
+    #010603;
+  overflow: hidden;
+}
+
+.portrait-stage {
+  position: relative;
+  min-height: 100vh;
+  padding: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.portrait-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.portrait-back-button {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 20;
+  width: 3.1rem;
+  height: 3.1rem;
+  border: 2px solid #84cc16;
+  border-radius: 999px;
+  padding: 0;
+  background: rgba(5, 11, 0, 0.72);
+  color: #d9f99d;
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.portrait-back-button:hover {
+  background: rgba(132, 204, 22, 0.25);
+  box-shadow: 0 0 26px rgba(163, 230, 53, 0.35);
+}
+
+.portrait-message {
+  margin: 0 auto;
+  padding: 0.8rem 1rem;
+  border: 1px solid rgba(163, 230, 53, 0.45);
+  border-radius: 0.75rem;
+  background: rgba(0, 0, 0, 0.6);
+  color: #dcfce7;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  text-align: center;
+  z-index: 1;
+}
+
+.portrait-message code {
+  color: #bef264;
+}
+
+.portrait-message-loading {
+  position: absolute;
+  left: 50%;
+  bottom: 1.4rem;
+  transform: translateX(-50%);
+}
+
+@media (min-width: 768px) {
+  .ascii-demo-content {
+    padding: 0 5rem;
+  }
+
+  .portrait-stage {
+    padding: 1.8rem;
+  }
+
+  .portrait-back-button {
+    top: 1.4rem;
+    left: 1.4rem;
+  }
+}
